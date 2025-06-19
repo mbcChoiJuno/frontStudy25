@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<strong>머리말</strong><p id="me"><span>가운데</span><a href="">링크</a>
+	<img src="../image/cat.png"></p><button>꼬리말</button>
+	<hr>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+	var me = document.getElementById("me");
+	print("topNode:{0}<br>", me.ownerDocument.nodeName);
+	print("firstChild:{0}<br>", me.firstChild.nodeName);
+	print("lastChild:{0}<br>", me.lastChild.nodeName);
+	print("parentNode:{0}<br>", me.parentNode.nodeName);
+	print("previousSibling:{0}<br>", me.previousSibling.nodeName);
+	print("nextSibling:{0}<br>", me.nextSibling.nodeName);
+	
+</script>
+
+</body>
+</html>

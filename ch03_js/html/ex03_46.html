@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	function init() {
+		var emp = [{ "name": "kim", "age": 30 },
+			{ "name": "lee", "age": 40 },
+			{ "name": "park", "age": 20 }];
+		var msg = "";
+
+		msg += "이름:{0}<br>나이:{1}<br><br>".format(emp[0].name, emp[0].age);
+		msg += "이름:{0}<br>나이:{1}<br><br>".format(emp[1].name, emp[1].age);
+		msg += "이름:{0}<br>나이:{1}<br><br>".format(emp[2].name, emp[2].age);
+		
+		document.getElementById("result").innerHTML = msg;
+	}
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+
+	<h2>JSON표기법</h2>
+	<div id="result"></div>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+	
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+
+	var days = new Array("일", "월", "화", "수", "목", "금", "토");
+
+	var date = new Date();
+
+	document.write("오늘은 {0}년 {1}월 {2}일 {3}요일 입니다. <br>"
+			.format(date.getFullYear(), 
+					(date.getMonth() + 1), 
+					date.getDate(),
+					days[date.getDay()] ));
+
+	document.write("현재 시간은 {0}:{1}:{2}입니다."
+			.format(date.getHours(),
+					date.getMinutes(),
+					date.getSeconds() ));
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+</script>
+
+</body>
+</html>

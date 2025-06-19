@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	var worker = null;
+	
+	function init() {
+		var btnStart = document.getElementById("btnStart");
+		var btnStop = document.getElementById("btnStop");
+		var demo = document.getElementById("demo");
+		
+		btnStart.addEventListener("click", startWorker);
+		btnStop.addEventListener("click", stopWorker);
+	}
+	
+	function startWorker() {
+		if (!window.Worker) {
+			console.log("워커 지원 X 브라우저");
+		}
+		
+		if (worker) {
+			stopWorker();
+		}
+		
+		worker = new Worker("../js/ex03_61worker.js");
+		worker.postMessage("");
+		
+		worker.onmessage = function(event) {
+			console.log("호출 메세지 : ", event.data);
+			demo.innerHTML += event.data + "<br>";
+		};
+	}
+	
+	function stopWorker() {
+
+		if (worker) {
+			worker.terminate();
+			worker = null;
+		}
+	}
+	
+	window.addEventListener("load", init, false);
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<h2>Web Worker Test</h2>
+	
+	<button id="btnStart" class="btn">start</button> 
+	<button id="btnStop" class="btn">stop</button> 
+	
+	<div id="demo"></div>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+	
+</script>
+
+</body>
+</html>

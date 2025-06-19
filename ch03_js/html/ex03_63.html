@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	function showPosition(pos) {
+		demo = document.getElementById("demo").innerHTML
+			= "위도: {0}<br>경도: {1}"
+			.format(pos.coords.latitude, pos.coords.longitude);
+	}
+	
+	function locationEventHandler() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			document.getElementById("demo").innerHTML
+				= "브라우저 geolocation 미지원";
+		}
+	}
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p>현재 위치가 궁금한가요?</p>
+	<button onclick="locationEventHandler()">위도/경도</button>
+	<p id="demo"></p>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+	
+	
+</script>
+
+</body>
+</html>

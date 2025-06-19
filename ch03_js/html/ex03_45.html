@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+
+function init() {
+	var emp = {
+			"name": "민들레",
+			"age": "25",
+			"tel": "111-1111",
+			"address": "서울",};
+	var msg = "";
+	
+	msg += "이름:" + emp.name + "<br>"
+	+ "나이:" + emp.age + "<br>"
+	+ "전화:" + emp.tel + "<br>"
+	+ "주소:" + emp.address + "<br>";
+	
+	document.getElementById("result").innerHTML = msg;
+	
+}
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+
+	<h2>JSON표기법</h2>
+	<div id="result"></div>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+</script>
+
+</body>
+</html>

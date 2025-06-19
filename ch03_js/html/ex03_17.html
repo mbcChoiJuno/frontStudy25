@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	var kor, eng, sum;
+	
+	do {
+		kor = prompt("점수를 입력하시오","");
+		
+		if (kor < 0 || kor > 100) {
+			alert("0-100 사이만 입력하세요");
+		}
+		
+	} while (kor <0 || kor > 100);
+
+	do {
+		eng = prompt("점수를 입력하시오","");
+		
+		if (eng < 0 || eng > 100) {
+			alert("0-100 사이만 입력하세요");
+		}
+		
+	} while (eng <0 || eng > 100);
+		
+	sum = parseInt(kor) + parseInt(eng);
+	document.write("합계:" + sum);
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+</script>
+
+</body>
+</html>

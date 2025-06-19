@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- head js -->
+<script type="text/javascript">
+
+	function plusFunc() {
+		var a = parseInt(frm.a.value);
+		var b = parseInt(frm.b.value);
+
+		if (isNaN(a) || isNaN(b)) {
+			alert("a 또는 b 숫자가 아님");
+			
+			frm.a.value = "";
+			frm.b.value = "";
+			frm.a.focus();
+			
+			return;
+		}
+		
+		frm.rs.value = a + b;
+	}
+
+	function diviFunc() {
+		var a = Number(frm.a.value);
+		var b = Number(frm.b.value);
+		rs=a/b;
+		
+		if(isFinite(rs) == false) {
+			alert("0으로 나눌 수 없습니다.");
+			frm.a.value = "";
+			frm.b.value = "";
+			frm.focus();
+			return;
+		}
+		frm.rs.value = rs;
+	}
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form name="frm">
+	A: <input type="text" size="7" name="a">&nbsp; &nbsp;
+	B: <input type="text" size="7" name="b">&nbsp; &nbsp;
+	결과: <input type="text" size="7" name="rs">
+	<input type="button" name="+" onclick="plusFunc()" value="더하기">
+	<input type="button" name="/" onclick="diviFunc()" value="나누기">
+</form>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+</script>
+
+</body>
+</html>

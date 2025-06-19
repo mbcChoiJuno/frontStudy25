@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	var a;
+
+	function play() {
+		a = document.getElementById("ado");
+		a.play();
+	}
+
+	function pause() {
+		a.pause();
+	}
+
+	function mute() {
+		a.volume = 0;
+	}
+
+	function unmute() {
+		a.volume = 1;
+	}
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<audio id="ado" controls = "controls">
+			<source src="../audio/welcome.mp3" type="audio/mp3"/>
+			<source src="../audio/welcome.ogg" type="audio/ogg"/>
+		</audio> <br>
+		<button onclick="play()">재생</button>
+		<button onclick="pause()">일시정지</button>
+		<button onclick="mute()">음소거</button>
+		<button onclick="unmute()">해제</button>
+		
+	</div>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+	
+</script>
+
+</body>
+</html>

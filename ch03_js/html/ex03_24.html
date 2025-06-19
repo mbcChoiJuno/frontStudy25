@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	function User(name, age) {
+		this.name = name;
+		this.age = age;
+		this.view = function() {
+			document.write('My name is ' + this.name + "<br>");
+			document.write('My age is ' + this.age + "<br>");
+		};
+	}
+	
+	var ob1 = new User('kim',25);
+	var ob2 = new User('lee',20);
+	
+	ob1.view();
+	ob2.view();
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+</script>
+
+</body>
+</html>

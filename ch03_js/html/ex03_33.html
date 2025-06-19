@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="../utils/utils.js"></script>
+
+<!-- head js -->
+<script type="text/javascript">
+	
+	function process() {
+		var name = frm.name.value;
+		var phone = frm.phone.value;
+		location.href = "ex03_33win2.html?" + name + "&" + phone;
+	}
+	
+</script>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form name="frm">
+		사용자명 : <input type="text" name="name">
+		전화번호 : <input type="text" name="phone">
+		<input type="button" onclick = process() value="보내기">
+	</form>
+
+<!-- body js -->
+<script type="text/javascript">
+	
+	
+	
+</script>
+
+</body>
+</html>
